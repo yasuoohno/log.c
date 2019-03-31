@@ -6,7 +6,7 @@ A simple logging library implemented in C99
 
 ## Usage
 **[log.c](src/log.c?raw=1)** and **[log.h](src/log.h?raw=1)** should be dropped
-into an existing project and compiled along with it. The library provides 6
+into an existing project and compiled along with it. The library provides 12
 function-like macros for logging:
 
 ```c
@@ -16,6 +16,17 @@ log_info(const char *fmt, ...);
 log_warn(const char *fmt, ...);
 log_error(const char *fmt, ...);
 log_fatal(const char *fmt, ...);
+```
+
+for logging with function name.
+
+```c
+flog_trace(const char *fmt, ...);
+flog_debug(const char *fmt, ...);
+flog_info(const char *fmt, ...);
+flog_warn(const char *fmt, ...);
+flog_error(const char *fmt, ...);
+flog_fatal(const char *fmt, ...);
 ```
 
 Each function takes a printf format string followed by additional arguments:
